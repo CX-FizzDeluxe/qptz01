@@ -4,10 +4,10 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class FizzBuzz {
     
-    private static Boolean findNumber(int number){
+    private static Boolean findNumber(int number,int numberToFind){
         
         while(number != 0){
-            if(number % 10 == number){
+            if(number % 10 == numberToFind){
                 return true;
             }
             number/=10;
@@ -18,15 +18,15 @@ public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
             String output = "";
-            if(number % 3 == 0 || findNumber(3) == true){
+            if(number % 3 == 0 || findNumber(number,3) == true){
                 output+="fizz";
             }
             
             if(output.length() > 0){ 
-                if(number % 5 == 0 || findNumber(5) == true){
+                if(number % 5 == 0 || findNumber(number,5) == true){
                     output+=" buzz";
                 }
-            } else if(number % 5 == 0 || findNumber(5) == true){
+            } else if(number % 5 == 0 || findNumber(number,5) == true){
                     output+="buzz";
             }
                 
