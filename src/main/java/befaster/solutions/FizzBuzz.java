@@ -15,6 +15,18 @@ public class FizzBuzz {
         
         return false;
     }
+    
+    private static Boolean isIdentical(int number){
+        int firstNumber = number%10;
+        number/=10;
+        while(number != 0){
+            if(number % 10 != firstNumber){
+                return false;
+            }
+            number/=10;
+        }
+        return true;
+    }
 
     public static String fizzBuzz(Integer number) {
             String output = "";
@@ -28,6 +40,14 @@ public class FizzBuzz {
                 }
             } else if(number % 5 == 0 || findNumber(number,5) == true){
                     output+="buzz";
+            }
+            
+            if(output.length() > 0){
+                if(isIdentical(number) == true && number > 10){
+                    output+=" deluxe";
+                }
+            } else if(isIdentical(number) == true && number > 10){
+                    output+="deluxe";
             }
                 
             if(output.length() == 0){
