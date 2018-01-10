@@ -44,10 +44,18 @@ public class FizzBuzz {
             
             if(output.length() > 0){
                 if(isIdentical(number) == true && number > 10){
-                    output+=" deluxe";
+                    if(number % 2 == 1){
+                        output+=" fake deluxe";
+                    } else {
+                        output+=" deluxe"; 
+                    }
                 }
             } else if(isIdentical(number) == true && number > 10){
-                    output+="deluxe";
+                    if(number % 2 == 1){
+                        output+="fake deluxe";
+                    } else {
+                        output+="deluxe"; 
+                    }
             }
                 
             if(output.length() == 0){
