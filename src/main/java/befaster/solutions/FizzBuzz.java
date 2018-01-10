@@ -43,19 +43,15 @@ public class FizzBuzz {
             }
             
             if(output.length() > 0){
-                if(isIdentical(number) == true && number > 10){
+                Boolean rule1 = (number % 3 == 0 && findNumber(number,3) == true);
+                Boolean rule2 = (number % 5 == 0 && findNumber(number,5) == true);
+                if(rule1 == true || rule2 == true){
                     if(number % 2 == 1){
                         output+=" fake deluxe";
                     } else {
                         output+=" deluxe"; 
                     }
                 }
-            } else if(isIdentical(number) == true && number > 10){
-                    if(number % 2 == 1){
-                        output+="fake deluxe";
-                    } else {
-                        output+="deluxe"; 
-                    }
             }
                 
             if(output.length() == 0){
